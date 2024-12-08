@@ -1,0 +1,24 @@
+{
+  "name": "lambdatest-accessibility-playwright",
+  "version": "1.0.0",
+  "description": "Playwright Accessibility Repository",
+  "main": "jest-playwright.config.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaTest/lambdatest-accessibility-playwright.git"
+  },
+  "author": "LambdaTest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LambdaTest/lambdatest-accessibility-playwright/issues"
+  },
+  "homepage": "https://github.com/LambdaTest/lambdatest-accessibility-playwright#readme",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jest-playwright-preset": "^4.0.0",
+    "playwright": "^1.49.0"
+  }
+}
