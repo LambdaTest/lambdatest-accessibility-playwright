@@ -52,14 +52,24 @@ set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
-```java
+```javascript
 capability.setCapability("accessibility", true); // Enable accessibility testing
 capability.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
 capability.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
 capability.setCapability("accessibility.needsReview", true); // Include issues that need review
 ```
 
-### Step 4: Execute and Monitor your Test
+### Step 4: Add the following add-on Script
+
+Add the following script in your `lambdatest-setup.js` file:
+
+```javascript
+await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
+const secondToggleButton = ltPage.locator('#crToggle').nth(0); 
+await secondToggleButton.click();
+```
+
+### Step 5: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
