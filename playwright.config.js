@@ -24,54 +24,6 @@ const config = {
         viewport: { width: 1280, height: 720 }
       }
     },
-    {
-      name: 'MicrosoftEdge:109:MacOS Ventura@lambdatest',
-      use: {
-        ...devices['iPhone 12 Pro Max']
-      }
-    },
-    {
-      name: 'pw-firefox:latest:Windows 10@lambdatest',
-      use: {
-        viewport: { width: 1280, height: 720 }
-      }
-    },
-    {
-      name: 'pw-webkit:latest:MacOS Ventura@lambdatest',
-      use: {
-        viewport: { width: 1920, height: 1080 }
-      }
-    }
-
-    // Config for running tests in local
-    // {
-    //   name: "chrome",
-    //   use: {
-    //     browserName: "chromium",
-    //     channel: "chrome",
-    //   },
-    // },
-    // {
-    //   name: "safari",
-    //   use: {
-    //     browserName: "webkit",
-    //     viewport: { width: 1200, height: 750 },
-    //   },
-    // },
-    // {
-    //   name: "firefox",
-    //   use: {
-    //     browserName: "firefox",
-    //     viewport: { width: 800, height: 600 },
-    //   },
-    // },
-    // // Test in mobile viewport.
-    // {
-    //   name: "chrome@pixel5",
-    //   use: {
-    //     ...devices['iPhone 12 Pro Max'],
-    //   }
-    // },
   ]
 }
 
