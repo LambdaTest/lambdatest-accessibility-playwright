@@ -9,6 +9,8 @@ const config = {
   use: {},
   projects: [
     // -- LambdaTest Config --
+    // Accessibility Testing for Playwright is currently only supported on the Chrome browser
+    //Browsers allowed: `Chrome`
     // name in the format: browserName:browserVersion:platform@lambdatest
     {
       name: 'chrome:latest:MacOS Ventura@lambdatest',
