@@ -10,8 +10,6 @@ const config = {
   projects: [
     // -- LambdaTest Config --
     // name in the format: browserName:browserVersion:platform@lambdatest
-    // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-    // Use additional configuration options provided by Playwright if required: https://playwright.dev/docs/api/class-testconfig
     {
       name: 'chrome:latest:MacOS Ventura@lambdatest',
       use: {
