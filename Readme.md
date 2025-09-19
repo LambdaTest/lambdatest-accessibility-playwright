@@ -53,10 +53,12 @@ set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
 ```javascript
-capability.setCapability("accessibility", true); // Enable accessibility testing
-capability.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
-capability.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
-capability.setCapability("accessibility.needsReview", true); // Include issues that need review
+const capabilities = {
+  "accessibility": true, // Enable accessibility testing
+  "accessibility.wcagVersion": "wcag21a", // Specify WCAG version (e.g., WCAG 2.1 Level A)
+  "accessibility.bestPractice": false, // Exclude best practice issues from results
+  "accessibility.needsReview": true // Include issues that need review
+};
 ```
 
 ### Step 4: Add the following add-on Script
