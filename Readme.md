@@ -79,3 +79,9 @@ Now execute your tests and visit the [Automation Dashboard](https://accounts.lam
 ```bash
 npx playwright test --config=./playwright.config.js
 ```
+
+<img src="images/playwright-accessibility-1.png"> <br />
+
+You can access the detailed accessibility report from the [Accessibility Automation Reports Dashboard](https://accessibility.lambdatest.com/automation)
+
+<img src="images/playwright-accessibility.png">
