@@ -26,7 +26,7 @@ capabilities.setCapability("build", "LambdaTestSampleApp");
 capabilities.setCapability("name", "LambdaTestJavaSample");
 ```
 
-> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ### Step 2: Establish User Authentication
 
@@ -37,8 +37,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 For Linux/macOS
 
 ```bash
-export LT_USERNAME=YOUR_LAMBDATEST_USERNAME
-export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
+export LT_USERNAME=<LAMBDATEST_USERNAME>
+export LT_ACCESS_KEY=<LAMBDATEST_ACCESS_KEY>
 ```
 
 For Windows
@@ -61,9 +61,10 @@ capability.setCapability("accessibility.needsReview", true); // Include issues t
 
 ### Step 4: Add the following add-on Script
 
-Add the following script in your `lambdatest-setup.js` file:
+LambdaTest uses an internal Chrome extension that powers accessibility scans and generates accessibility reports. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
 
 ```javascript
+// Load the extension for report generation of the accessibility tests
 await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
 const secondToggleButton = ltPage.locator('#crToggle').nth(0); 
 await secondToggleButton.click();
@@ -74,5 +75,5 @@ await secondToggleButton.click();
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
 ```bash
-node test
+npx playwright test --config=./playwright.config.js
 ```
